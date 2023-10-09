@@ -1,37 +1,8 @@
-# CV App
+# React + Vite
 
-The CV App is a web application built using Vite and React that allows users to easily create and edit their professional CVs. Users can input their general information, add a short description, list their educational background, work experience, and skills to generate a well-structured CV.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Table of Contents
+Currently, two official plugins are available:
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Features
-
-- User-friendly interface for creating and editing CVs.
-- Input sections for general information, short description, education, work experience, and skills.
-- Real-time preview of the CV as users input their details.
-- Responsive design for a seamless experience on different devices.
-
-## Usage
-
-1. **Access the App**: Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the CV App.
-
-2. **Input Your Details**: Use the app to input your general information, short description, education, work experience, and skills.
-
-3. **Real-time Preview**: Observe the real-time preview of your CV on the right side of the screen.
-
-
-## Technologies Used
-
-- **Vite**: Build tool for web development.
-- **React**: JavaScript library for building user interfaces.
-- **Styled-components**: CSS-in-JS library for styling components.
-- **React Router**: For handling routing within the app.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
