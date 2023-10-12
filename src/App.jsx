@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Description from "./components/Description/Description";
+import Info from "./components/Info/Info";
+import Education from "./components/Education/Education";
 
 function App() {
   const [viewButton, setViewButton] = useState(true);
@@ -20,12 +22,13 @@ function App() {
               <Description />
             </section>
             <section>
-              <span>Info</span>
+              <Info />
             </section>
             <section>
               <span>Education</span>
+              <Education />
             </section>
-            <section>
+            <section>              
               <span>Work Experience</span>
             </section>
           </div>
