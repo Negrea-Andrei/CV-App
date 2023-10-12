@@ -6,15 +6,17 @@
 
 :root {
   --bodyColor: rgb(248, 255, 255);
-  --sectionColor: rgb(192, 238, 238);
-  --inputFocused: rgb(27, 133, 0);
+  --sectionColor: rgb(203, 231, 255);
+  --inputBorderFocused: rgb(27, 133, 0);
+  --containerColor: rgb(235, 247, 255);
+  --inputFocused: rgba(81, 255, 0, 0.055);
 }
 
 html,
 body {
   width: 100%;
   height: 100vh;
-  background-color: var(--bodyColor);
+  background-color: var(--bodyColor); 
   font-size: 10px;
 }
 

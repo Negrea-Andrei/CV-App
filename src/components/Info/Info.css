@@ -1,20 +1,29 @@
 .general-info {
     width: 60%;
-    height: fit-content;
+    height: 18%;
+    min-width: 450px;
+    min-height: 150px;
 }
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 15px;
+    margin: 10px;
+}
+
+.general-info .title {
+    font-size: 3rem;
 }
 
 .grid input {
     width: 80%;
+    height: 30px;
         
 }
 
 .grid input:focus {
     outline: none;
-    border-color: var(--inputFocused);
+    border-color: var(--inputBorderFocused);
+    background-color: var(--inputFocused);
 }

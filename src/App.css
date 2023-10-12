@@ -3,4 +3,12 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: var(--containerColor);
+}
+
+.section {
+    margin-top: 25px;
+    background-color: var(--sectionColor);
+    padding: 15px;
+    border-radius: 15px;
 }
