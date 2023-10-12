@@ -25,4 +25,5 @@ textarea {
     outline: none;
     border-color: var(--inputBorderFocused);
     background-color: var(--inputFocused);
+    border-radius: 15px;
 }
