@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Space+Grotesk:wght@400&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,8 +12,8 @@
   --inputBorderFocused: rgb(27, 133, 0);
   --containerColor: rgb(235, 247, 255);
   --inputFocused: rgba(81, 255, 0, 0.062);
+  font-family: 'Space Grotesk', sans-serif;
 }
-
 html,
 body {
   width: 100%;
