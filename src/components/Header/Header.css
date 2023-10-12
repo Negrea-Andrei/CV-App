@@ -1,8 +1,10 @@
 .header{
     background-color: rgb(234 246 255);
     height: 12vh;
+    width: 100%;
     min-height: 90px;
     min-width: 400px;
+    position: sticky;
     display: flex;
     flex-direction: column;
     justify-content: center;
