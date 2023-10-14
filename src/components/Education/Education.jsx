@@ -17,17 +17,13 @@ function Education({ education }) {
               id="school"
               name="school"
             />
+            <input placeholder="Degree" type="text" id="degree" name="degree" />
             <input
-              placeholder="Degree"
+              placeholder="Start"
+              id="start-school"
               type="text"
-              id="degree"
-              name="degree"
+              name="start_school"
             />
-            <input 
-            placeholder="Start" 
-            id="start-school" 
-            type="text" 
-            name="start_school" />
             <input
               placeholder="Finish"
               type="text"
@@ -35,6 +31,14 @@ function Education({ education }) {
               name="finish_school"
             />
           </div>
+          <textarea
+            name="description"
+            className="text-area"
+            placeholder="Enter what did you learned during your time in college......"
+          ></textarea>
+          <button className="input-button">
+            Delete <i className="fas fa-trash-alt"></i>
+          </button>
         </>
       ) : (
         "Salut"

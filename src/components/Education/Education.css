@@ -1,6 +1,6 @@
 .add-segment {
     position: absolute;
     left: 90%;
-    top: 12%;
+    top: 25px;
     cursor: pointer;
 }

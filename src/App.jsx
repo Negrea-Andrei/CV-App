@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Info from "./components/Info/Info";
 import Description from "./components/Description/Description";
 import Education from "./components/Education/Education";
+import Work from "./components/Work/Work";
 
 function App() {
   const [viewButton, setViewButton] = useState(true);
@@ -26,7 +27,8 @@ function App() {
           <div className="contain">
             <Info />
             <Description />
-            <Education education={education} />           
+            <Education education={education} />
+            <Work />           
           </div>
         ) : (
           <div>NOT YET</div>
