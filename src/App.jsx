@@ -20,6 +20,17 @@ function App() {
     finish_school:'',
   }]
 
+  const experience = ([
+    {
+      company: '',
+      location: '',
+      from: '',
+      to: '',
+      role: '',
+      description: '',
+    },
+  ]);
+
   return (
     <div className="container">
       <Header toggleState={toggleState} viewButton={viewButton} />
@@ -28,7 +39,7 @@ function App() {
             <Info />
             <Description />
             <Education education={education} />
-            <Work />           
+            <Work experience={experience} />           
           </div>
         ) : (
           <div>NOT YET</div>

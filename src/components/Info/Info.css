@@ -26,4 +26,5 @@ input:focus, textarea:focus {
     border-color: var(--inputBorderFocused);
     background-color: var(--inputFocused);
     border-radius: 15px;
+    border-width: 1px;
 }

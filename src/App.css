@@ -12,7 +12,7 @@
     width: 60%;
     height: fit-content;
     position: relative;
-    min-width: 300px;
+    min-width: 370px;
     min-height: 230px;
     margin-top: 25px;
     background-color: var(--sectionColor);
