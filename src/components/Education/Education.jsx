@@ -35,12 +35,6 @@ function Education({ education }) {
               name="finish_school"
             />
           </div>
-          <input
-            placeholder="Degree"
-            type="text"
-            id="degree"
-            name="Degree"
-          />
         </>
       ) : (
         "Salut"
