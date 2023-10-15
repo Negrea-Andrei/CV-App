@@ -1,14 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import "./Education.css";
 
-function Education({ education }) {
+export default function Education({ education, addEducationSegment, setEducation}) {
+  const handleAddEducation = (e) => {
+    e.preventDefault();
+    addEducationSegment();
+  };
+
+  const handleRemoveSegment = () => {
+    let dupEducation = [...education];
+    dupEducation.pop();
+    setEducation(dupEducation);
+  };
+
   return (
     <section className="section">
       <h2 className="title">Education</h2>
-      <span className="add-segment">
-        <i className="fa-solid fa-plus fa-2xl"></i>
-      </span>
-      {education.length !== 0 ? (
+      <button onClick={(e) => handleAddEducation(e)}>
+        <span className="add-segment">
+          <i className="fa-solid fa-plus fa-2xl"></i>
+        </span>
+      </button>
+      {education.map((education) => (
         <>
           <div className="grid">
             <input
@@ -36,15 +50,16 @@ function Education({ education }) {
             className="text-area"
             placeholder="Enter what did you learned during your time in college......"
           ></textarea>
-          <button className="input-button">
+          <button className="input-button" onClick={handleRemoveSegment}>
             Delete <i className="fas fa-trash-alt"></i>
           </button>
+          <div className="divider"></div>
         </>
-      ) : (
-        "Salut"
+      ))}
+      {education.length === 0 && (
+        <span className="warning">Please add an education field</span>
       )}
     </section>
   );
 }
 
-export default Education;

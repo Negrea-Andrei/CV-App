@@ -1,14 +1,20 @@
 import "./Work.css";
 import React from "react";
 
-export default function Work(experience) {
+export default function Work({ experience, addExperienceSegment }) {
+  const handleAddExperience = (e) => {
+    e.preventDefault();
+    addExperienceSegment();
+  };
   return (
     <section className="section">
       <h2 className="title">Work</h2>
-      <span className="add-segment">
-        <i className="fa-solid fa-plus fa-2xl"></i>
-      </span>
-      {experience.length !== 0 ? (
+      <button onClick={(e) => handleAddExperience(e)}>
+        <span className="add-segment">
+          <i className="fa-solid fa-plus fa-2xl"></i>
+        </span>
+      </button>
+      {experience.map((experience) => (
         <>
           <div className="grid">
             <input name="company" type="text" placeholder="Company Name" />
@@ -29,9 +35,11 @@ export default function Work(experience) {
           <button className="input-button">
             Delete <i className="fas fa-trash-alt"></i>
           </button>
+          <div className="divider"></div>
         </>
-      ) : (
-        "Salut"
+      ))}
+      {experience.length === 0 && (
+        <span className="warning">Please add an experience field</span>
       )}
     </section>
   );
