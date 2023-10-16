@@ -2,7 +2,11 @@ import React from "react";
 import { useState } from "react";
 import "./Education.css";
 
-export default function Education({ education, addEducationSegment, setEducation}) {
+export default function Education({
+  education,
+  addEducationSegment,
+  setEducation,
+}) {
   const handleAddEducation = (e) => {
     e.preventDefault();
     addEducationSegment();
@@ -62,4 +66,3 @@ export default function Education({ education, addEducationSegment, setEducation
     </section>
   );
 }
-

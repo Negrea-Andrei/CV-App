@@ -1,10 +1,21 @@
 import "./Work.css";
+import { useState } from "react";
 import React from "react";
 
-export default function Work({ experience, addExperienceSegment }) {
+export default function Work({
+  experience,
+  addExperienceSegment,
+  setExperience,
+}) {
   const handleAddExperience = (e) => {
     e.preventDefault();
     addExperienceSegment();
+  };
+
+  const handleRemoveSegment = () => {
+    let dupExperience = [...experience];
+    dupExperience.pop();
+    setExperience(dupExperience);
   };
   return (
     <section className="section">
@@ -17,22 +28,26 @@ export default function Work({ experience, addExperienceSegment }) {
       {experience.map((experience) => (
         <>
           <div className="grid">
-            <input name="company" type="text" placeholder="Company Name" />
+            <input
+              name="company"
+              type="text"
+              placeholder="Company Name"
+            />
             <input
               name="role"
               className="input-full-width"
               type="text"
               placeholder="Role"
             />
-            <input name="from" type="text" placeholder="From" />
-            <input name="to" type="text" placeholder="To" />
+            <input name="start" type="text" placeholder="From" />
+            <input name="finish" type="text" placeholder="To" />
           </div>
           <textarea
             name="description"
             className="text-area"
             placeholder="List Job description, responsibilities, achievements here....."
           ></textarea>
-          <button className="input-button">
+          <button className="input-button" onClick={handleRemoveSegment}>
             Delete <i className="fas fa-trash-alt"></i>
           </button>
           <div className="divider"></div>

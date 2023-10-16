@@ -40,8 +40,8 @@ function App() {
     {
       company: "",
       location: "",
-      from: "",
-      to: "",
+      start: "",
+      finish: "",
       role: "",
       description: "",
     },
@@ -52,8 +52,8 @@ function App() {
     const newSegment = {
       company: "",
       location: "",
-      from: "",
-      to: "",
+      start: "",
+      finish: "",
       role: "",
       description: "",
     };
@@ -71,10 +71,12 @@ function App() {
           <Education
             education={education}
             addEducationSegment={addEducationSegment}
+            setEducation={setEducation}
           />
           <Work
             experience={experience}
             addExperienceSegment={addExperienceSegment}
+            setExperience={setExperience}
           />
         </div>
       ) : (
