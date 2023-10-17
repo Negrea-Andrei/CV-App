@@ -1,7 +1,12 @@
 import './Description.css'
 import React from 'react';
 
-function Description() {
+function Description({description, setDescription}) {
+    const handleSetDescription = (e) => {
+      const val = e.target.value;
+      setDescription(val);
+      console.log(description)
+    };
   
   return (
     <section className="section">
@@ -10,6 +15,8 @@ function Description() {
         <textarea
           name="summary"
           className="text-area"
+          value={description}
+          onChange={handleSetDescription}
           placeholder="Write your summary here....."
         ></textarea>
       </div>

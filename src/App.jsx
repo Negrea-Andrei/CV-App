@@ -12,6 +12,15 @@ function App() {
   const toggleState = () => {
     setViewButton(!viewButton);
   };
+  
+  const [info, setInfo] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+  });
+
+  const [description, setDescription] = useState('');
 
   const [education, setEducation] = useState([
     {
@@ -19,6 +28,7 @@ function App() {
       degree: "",
       start_school: "",
       finish_school: "",
+      describe:""
     },
   ]);
 
@@ -26,11 +36,10 @@ function App() {
     const duplicateArray = [...education];
     const newSegment = {
       school: "",
-      location: "",
-      from: "",
-      to: "",
-      qualification: "",
-      achievements: "",
+      degree: "",
+      start_school: "",
+      finish_school: "",
+      describe:""
     };
     duplicateArray.push(newSegment);
     setEducation(duplicateArray);
@@ -39,10 +48,9 @@ function App() {
   const [experience, setExperience] = useState([
     {
       company: "",
-      location: "",
-      start: "",
-      finish: "",
       role: "",
+      start: "",
+      finish: "",      
       description: "",
     },
   ]);
@@ -51,7 +59,6 @@ function App() {
     const duplicateArray = [...experience];
     const newSegment = {
       company: "",
-      location: "",
       start: "",
       finish: "",
       role: "",
@@ -66,8 +73,12 @@ function App() {
       <Header toggleState={toggleState} viewButton={viewButton} />
       {viewButton ? (
         <div className="contain">
-          <Info />
-          <Description />
+          <Info
+          setInfo={setInfo}
+          info={info} />
+          <Description
+          description={description}
+          setDescription={setDescription} />
           <Education
             education={education}
             addEducationSegment={addEducationSegment}
