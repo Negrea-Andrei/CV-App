@@ -5,6 +5,7 @@ import Info from "./components/Info/Info";
 import Description from "./components/Description/Description";
 import Education from "./components/Education/Education";
 import Work from "./components/Work/Work";
+import ViewCV from "./components/ViewCV/ViewCV";
 
 function App() {
   const [viewButton, setViewButton] = useState(true);
@@ -12,15 +13,15 @@ function App() {
   const toggleState = () => {
     setViewButton(!viewButton);
   };
-  
+
   const [info, setInfo] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    address: '',
+    name: "",
+    phone: "",
+    email: "",
+    address: "",
   });
 
-  const [description, setDescription] = useState('');
+  const [description, setDescription] = useState("");
 
   const [education, setEducation] = useState([
     {
@@ -28,7 +29,7 @@ function App() {
       degree: "",
       start_school: "",
       finish_school: "",
-      describe:""
+      describe: "",
     },
   ]);
 
@@ -39,7 +40,7 @@ function App() {
       degree: "",
       start_school: "",
       finish_school: "",
-      describe:""
+      describe: "",
     };
     duplicateArray.push(newSegment);
     setEducation(duplicateArray);
@@ -50,7 +51,7 @@ function App() {
       company: "",
       role: "",
       start: "",
-      finish: "",      
+      finish: "",
       description: "",
     },
   ]);
@@ -73,12 +74,11 @@ function App() {
       <Header toggleState={toggleState} viewButton={viewButton} />
       {viewButton ? (
         <div className="contain">
-          <Info
-          setInfo={setInfo}
-          info={info} />
+          <Info setInfo={setInfo} info={info} />
           <Description
-          description={description}
-          setDescription={setDescription} />
+            description={description}
+            setDescription={setDescription}
+          />
           <Education
             education={education}
             addEducationSegment={addEducationSegment}
@@ -91,7 +91,9 @@ function App() {
           />
         </div>
       ) : (
-        <div>NOT YET</div>
+        <>
+          <ViewCV />
+        </>
       )}
     </div>
   );
