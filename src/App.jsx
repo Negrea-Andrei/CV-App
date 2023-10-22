@@ -92,7 +92,7 @@ function App() {
         </div>
       ) : (
         <div className="view-CV">
-          <ViewCV />
+          <ViewCV info={info} />
         </div>
       )}
     </div>

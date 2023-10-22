@@ -33,7 +33,7 @@ h1{
     justify-content: flex-start
 }
 
-.test {
+.actions {
     width: 100%;
     display: flex;
     flex-direction: row;
