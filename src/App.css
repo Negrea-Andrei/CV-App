@@ -8,6 +8,7 @@
     position: relative;
 }
 
+
 .section {
     width: 60%;
     height: fit-content;
@@ -22,4 +23,11 @@
 
 .section:last-child {
     margin-bottom: 25px;
+}
+
+.view-CV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

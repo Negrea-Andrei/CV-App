@@ -91,9 +91,9 @@ function App() {
           />
         </div>
       ) : (
-        <>
+        <div className="view-CV">
           <ViewCV />
-        </>
+        </div>
       )}
     </div>
   );

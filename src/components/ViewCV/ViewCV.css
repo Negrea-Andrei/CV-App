@@ -1,5 +1,9 @@
 .view-container {
-    width: 40%;
-    height: 200px;
-    background-color: antiquewhite;
+    width: 595px;
+    background: white;
+    margin: 0 auto;
+    min-height: 842px;
+    font-size: 1.3rem;
+    color: #333333;
+    box-shadow: 5px 10px 55px rgba(0, 0, 0, 0.25);
 }
