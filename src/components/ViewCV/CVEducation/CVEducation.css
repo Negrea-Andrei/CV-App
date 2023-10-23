@@ -20,6 +20,10 @@
     overflow-wrap: break-word;
 }
 
+.degree, .role {
+    text-align: left;
+}
+
 .description {
     font-size: 1.1rem;
     color: black;
