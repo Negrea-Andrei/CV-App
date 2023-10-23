@@ -13,10 +13,10 @@ export default function CVEducation({ education }) {
               <div className="education-body">
                 <div>
                   <h3>{item.school}</h3>
-                  <p className="green">{item.degree}</p>
+                  <p className="degree">{item.degree}</p>
                 </div>
                 <p className="description">{item.describe} </p>
-                <p className="right">{item.start_school + ' - ' + item.finish_school}</p>
+                <p className="year">{item.start_school + ' - ' + item.finish_school}</p>
               </div>
             );
           })}

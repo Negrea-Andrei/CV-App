@@ -1,0 +1,21 @@
+.experience-header {
+    padding: 0 10px 0 15px;
+    width: 100%;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.experience-header h2 {
+    width: 100%;
+    border-bottom: 2px solid var(--underlineHeaders);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.experience-body {
+    display: grid;
+    grid-template-columns: 2fr 320px 1fr;
+    grid-gap: 1.5rem;
+    padding-bottom: 3rem;
+    overflow-wrap: break-word;
+}

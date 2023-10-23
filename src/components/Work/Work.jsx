@@ -24,7 +24,8 @@ export default function Work({
 
     let dupExperience = [...experience];
     dupExperience[index][key] = val;
-    setExperience(dupExperience);
+    console.log(experience)
+    setExperience(dupExperience);    
   };
 
   return (
@@ -56,19 +57,19 @@ export default function Work({
               onChange={(e) => handleSetInfo(e, index)}
             />
             <input
-              name="start_school"
-              id="start_school"
+              name="start"
+              id="start"
               type="text"
               placeholder="From"
-              value={experienceField.start_school}
+              value={experienceField.start}
               onChange={(e) => handleSetInfo(e, index)}
             />
             <input
-              name="finish_school"
-              id="finish_school"
+              name="finish"
+              id="finish"
               type="text"
               placeholder="To"
-              value={experienceField.finish_school}
+              value={experienceField.finish}
               onChange={(e) => handleSetInfo(e, index)}
             />
           </div>

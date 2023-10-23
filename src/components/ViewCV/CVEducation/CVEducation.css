@@ -19,3 +19,8 @@
     padding-bottom: 3rem;
     overflow-wrap: break-word;
 }
+
+.description {
+    font-size: 1.1rem;
+    color: black;
+}
