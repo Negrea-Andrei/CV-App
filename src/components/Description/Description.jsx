@@ -5,7 +5,6 @@ function Description({description, setDescription}) {
     const handleSetDescription = (e) => {
       const val = e.target.value;
       setDescription(val);
-      console.log(description)
     };
   
   return (

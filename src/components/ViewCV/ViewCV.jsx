@@ -1,6 +1,7 @@
 import "./ViewCV.css";
 import CVHeader from "./CVHeader/CVHeader";
 import CVDescription from "./CVDescription/CVDescription";
+import CVEducation from "./CVEducation/CVEducation";
 
 export default function ViewCV({ info, description, education, experience }) {
   return (
@@ -12,6 +13,7 @@ export default function ViewCV({ info, description, education, experience }) {
         address={info.address}
       />
       <CVDescription description={description} />
+      <CVEducation education={education} />
     </div>
   );
 }

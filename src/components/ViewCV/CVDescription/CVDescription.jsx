@@ -5,7 +5,7 @@ export default function CVDescription({ description }) {
     <>
       <div className="description-header">
         <h2>Description</h2>
-        <div>{description}</div>
+        <div className="description-body">{description}</div>
       </div>
     </>
   );

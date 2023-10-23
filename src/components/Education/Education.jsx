@@ -24,6 +24,7 @@ export default function Education({
     let dupEducation = [...education];
     dupEducation[index][key] = val;
     setEducation(dupEducation);
+    console.log(education)
   };
 
   return (
