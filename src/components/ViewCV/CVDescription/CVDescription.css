@@ -1,0 +1,19 @@
+.description-header {
+    padding:0 10px 0 15px;
+    width: 100%;
+    overflow: wrap;
+    text-align: justify
+}
+
+.description-header h2 {
+    width: 100%;
+    border-bottom: 2px solid var(--underlineHeaders);
+    font-size: 1.5rem;
+    margin-bottom: 5px;    
+}
+
+.description-header div:nth-child(2) {
+    overflow-wrap: break-word;
+    font-size: 1.2rem;   
+}
+

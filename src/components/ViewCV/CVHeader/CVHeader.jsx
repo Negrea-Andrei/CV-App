@@ -1,13 +1,18 @@
 import "./CVHeader.css";
 
 export default function CVHeader({name, phone, address, email}) {
+  const displayName = name ? name : "Name";
+  const displayPhone = phone ? phone : "Phone number";
+  const displayAddress = address ? address : "Address";
+  const displayEmail = email ? email : "email";
+
   return (
     <div className="cv-header">
-      <div className="name-header">{name}</div>
+      <div className="name-header">{displayName}</div>
       <div className="info-part">
-        <div>{email}</div>
-        <div>{phone}</div>
-        <div>{address}</div>
+        <div>{displayEmail}</div>
+        <div>{displayPhone}</div>
+        <div>{displayAddress}</div>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@
   --inputBorderFocused: rgb(27, 133, 0);
   --containerColor: rgb(235, 247, 255);
   --inputFocused: rgba(81, 255, 0, 0.062);
+  --underlineHeaders: rgb(49, 49, 49);
   font-family: 'Space Grotesk', sans-serif;
 }
 html,

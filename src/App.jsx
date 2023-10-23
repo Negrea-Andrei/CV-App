@@ -92,7 +92,8 @@ function App() {
         </div>
       ) : (
         <div className="view-CV">
-          <ViewCV info={info} />
+          <ViewCV info={info}
+          description={description} />
         </div>
       )}
     </div>
