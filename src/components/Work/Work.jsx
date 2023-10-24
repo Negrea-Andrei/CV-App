@@ -12,10 +12,13 @@ export default function Work({
     addExperienceSegment();
   };
 
-  const handleRemoveSegment = () => {
-    let dupExperience = [...experience];
-    dupExperience.pop();
-    setExperience(dupExperience);
+  const handleRemoveSegment = (key) => {
+    const index = experience.findIndex((item) => item.key === key);
+    if (index !== -1) {
+      let dupExperience = [...experience];
+      dupExperience.splice(index, 1);
+      setExperience(dupExperience);
+    }
   };
 
   const handleSetInfo = (e, index) => {
@@ -24,20 +27,19 @@ export default function Work({
 
     let dupExperience = [...experience];
     dupExperience[index][key] = val;
-    console.log(experience)
     setExperience(dupExperience);    
   };
 
   return (
     <section className="section">
       <h2 className="title">Work</h2>
-      <button onClick={(e) => handleAddExperience(e)}>
-        <span className="add-segment">
+      <button className="add-segment" onClick={(e) => handleAddExperience(e)}>
+        <span>
           <i className="fa-solid fa-plus fa-2xl"></i>
         </span>
       </button>
       {experience.map((experienceField, index) => (
-        <div key={index}>
+        <div key={experienceField.key} data-index={index}>
           <div className="grid">
             <input
               name="company"
@@ -81,7 +83,7 @@ export default function Work({
             className="text-area"
             placeholder="List Job description, responsibilities, achievements here....."
           ></textarea>
-          <button className="input-button" onClick={handleRemoveSegment}>
+          <button className="input-button" onClick={() => handleRemoveSegment(experienceField.key)}>
             Delete <i className="fas fa-trash-alt"></i>
           </button>
           <div className="divider"></div>

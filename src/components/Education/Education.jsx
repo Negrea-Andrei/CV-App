@@ -11,10 +11,13 @@ export default function Education({
     addEducationSegment();
   };
 
-  const handleRemoveSegment = () => {
-    let dupEducation = [...education];
-    dupEducation.pop();
-    setEducation(dupEducation);
+  const handleRemoveSegment = (key) => {
+    const index = education.findIndex((item) => item.key === key);
+    if (index !== -1) {
+      let dupEducation = [...education];
+      dupEducation.splice(index, 1);
+      setEducation(dupEducation);
+    }
   };
 
   const handleSetInfo = (e, index) => {
@@ -24,19 +27,18 @@ export default function Education({
     let dupEducation = [...education];
     dupEducation[index][key] = val;
     setEducation(dupEducation);
-    console.log(education)
   };
 
   return (
     <section className="section">
       <h2 className="title">Education</h2>
-      <button onClick={(e) => handleAddEducation(e)}>
-        <span className="add-segment">
+      <button className="add-segment" onClick={(e) => handleAddEducation(e)}>
+        <span>
           <i className="fa-solid fa-plus fa-2xl"></i>
         </span>
       </button>
       {education.map((educationField, index) => (
-        <div key={index}>
+        <div key={educationField.key} data-index={index}>
           <div className="grid">
             <input
               placeholder="School / University"
@@ -78,7 +80,7 @@ export default function Education({
             value={educationField.describe}
             placeholder="Enter what you learned during your time in college......"
           ></textarea>
-          <button className="input-button" onClick={handleRemoveSegment}>
+          <button className="input-button" onClick={() => handleRemoveSegment(educationField.key)}>
             Delete <i className="fas fa-trash-alt"></i>
           </button>
           <div className="divider"></div>

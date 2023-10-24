@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import uuid from 'react-uuid';
 import "./App.css";
 import Header from "./components/Header/Header";
 import Info from "./components/Info/Info";
@@ -25,6 +26,7 @@ function App() {
 
   const [education, setEducation] = useState([
     {
+      key: uuid(),
       school: "",
       degree: "",
       start_school: "",
@@ -36,6 +38,7 @@ function App() {
   const addEducationSegment = () => {
     const duplicateArray = [...education];
     const newSegment = {
+      key: uuid(),
       school: "",
       degree: "",
       start_school: "",
@@ -48,6 +51,7 @@ function App() {
 
   const [experience, setExperience] = useState([
     {
+      key: uuid(),
       company: "",
       role: "",
       start: "",
@@ -59,6 +63,7 @@ function App() {
   const addExperienceSegment = () => {
     const duplicateArray = [...experience];
     const newSegment = {
+      key: uuid(),
       company: "",
       start: "",
       finish: "",

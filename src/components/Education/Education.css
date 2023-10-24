@@ -3,6 +3,8 @@
     left: 90%;
     top: 25px;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .warning {
