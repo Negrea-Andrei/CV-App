@@ -43,6 +43,7 @@ export default function Education({
             <input
               placeholder="School / University"
               type="text"
+              maxLength='60'
               id="school"
               name="school"
               value={educationField.school}
@@ -51,6 +52,7 @@ export default function Education({
             <input
               placeholder="Degree"
               type="text"
+              maxLength='60'
               id="degree"
               name="degree"
               value={educationField.degree}
@@ -61,6 +63,7 @@ export default function Education({
               id="start_school"
               type="number"
               min="1970"
+              max="2023"
               name="start_school"
               value={educationField.start_school}
               onChange={(e) => handleSetInfo(e, index)}
@@ -68,6 +71,7 @@ export default function Education({
             <input
               placeholder="Finish"
               type="number"
+              min="1970"
               max="2023"
               id="finish_school"
               name="finish_school"
@@ -78,6 +82,7 @@ export default function Education({
           <textarea
             name="describe"
             className="text-area"
+            maxLength='200'
             onChange={(e) => handleSetInfo(e, index)}
             value={educationField.describe}
             placeholder="Enter what you learned during your time in college......"

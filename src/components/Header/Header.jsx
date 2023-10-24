@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-export default function Header({ toggleState, viewButton }) {
+export default function Header({ toggleState, viewButton, Print}) {
   return (
     <>
       <header className="header">
@@ -17,7 +17,7 @@ export default function Header({ toggleState, viewButton }) {
           ) : (
             <div className="actions">
               <span>
-                <i onClick={toggleState} className="fa-solid fa-print fa-2xl"></i>
+                <i onClick={Print} className="fa-solid fa-print fa-2xl"></i>
               </span>
               <span>
                 <i onClick={toggleState} className="fa-solid fa-pen fa-2xl"></i>

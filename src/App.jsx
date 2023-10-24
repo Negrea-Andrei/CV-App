@@ -74,9 +74,13 @@ function App() {
     setExperience(duplicateArray);
   };
 
+  const Print = () => {
+    window.print();
+  };
+
   return (
     <div className="container">
-      <Header toggleState={toggleState} viewButton={viewButton} />
+      <Header Print={Print} toggleState={toggleState} viewButton={viewButton} />
       {viewButton ? (
         <div className="contain">
           <Info setInfo={setInfo} info={info} />

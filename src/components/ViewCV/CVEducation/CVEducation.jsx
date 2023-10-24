@@ -14,8 +14,8 @@ export default function CVEducation({ education }) {
                   <p className="degree">{item.degree}</p>
                 </div>
                 <p className="description">{item.describe} </p>
-                {item.start_school &&
-                  item.finish_school(
+                {item.start_school && 
+                  item.finish_school && (
                     <p className="year">
                       {item.start_school + " - " + item.finish_school}
                     </p>
