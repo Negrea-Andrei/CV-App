@@ -33,6 +33,10 @@ h1{
     justify-content: flex-start
 }
 
+.header-buttons span {
+    cursor: pointer;
+}
+
 .actions {
     width: 100%;
     display: flex;

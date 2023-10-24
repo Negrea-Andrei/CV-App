@@ -12,7 +12,7 @@ export default function Header({ toggleState, viewButton, Print}) {
         <div className="header-buttons">
           {viewButton ? (
             <span>
-              <i onClick={toggleState} className="fa-solid fa-eye fa-beat fa-2xl"></i>
+              <i onClick={toggleState} className="fa-solid fa-eye fa-2xl"></i>
             </span>
           ) : (
             <div className="actions">
