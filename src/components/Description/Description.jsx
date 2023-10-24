@@ -14,6 +14,7 @@ function Description({description, setDescription}) {
         <textarea
           name="summary"
           className="text-area"
+          maxLength={500}
           value={description}
           onChange={handleSetDescription}
           placeholder="Write your summary here....."

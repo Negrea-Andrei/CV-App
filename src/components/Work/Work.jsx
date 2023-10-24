@@ -61,7 +61,8 @@ export default function Work({
             <input
               name="start"
               id="start"
-              type="text"
+              type="number"
+              min="1970"
               placeholder="From"
               value={experienceField.start}
               onChange={(e) => handleSetInfo(e, index)}
@@ -69,7 +70,8 @@ export default function Work({
             <input
               name="finish"
               id="finish"
-              type="text"
+              type="number"
+              max="2023"
               placeholder="To"
               value={experienceField.finish}
               onChange={(e) => handleSetInfo(e, index)}

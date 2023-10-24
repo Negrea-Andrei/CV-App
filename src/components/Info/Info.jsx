@@ -15,6 +15,7 @@ function Info({ info, setInfo }) {
             <input
               placeholder="First & Last Name"
               type="text"
+              pattern="[a-zA-Z]{3,30}"
               id="name"
               name=" name"
               onChange={(e) => handleChange(e)}
@@ -23,6 +24,7 @@ function Info({ info, setInfo }) {
             <input
               placeholder="Phone"
               type="tel"
+              pattern="[0-9]{8,}"
               id="phone"
               name="phone number"
               onChange={(e) => handleChange(e)}
@@ -32,6 +34,7 @@ function Info({ info, setInfo }) {
               placeholder="Email"
               id="email"
               type="email"
+              pattern="{8,35}"
               name="email"
               onChange={(e) => handleChange(e)}
               value={info.email}

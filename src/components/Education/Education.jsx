@@ -59,14 +59,16 @@ export default function Education({
             <input
               placeholder="Start"
               id="start_school"
-              type="text"
+              type="number"
+              min="1970"
               name="start_school"
               value={educationField.start_school}
               onChange={(e) => handleSetInfo(e, index)}
             />
             <input
               placeholder="Finish"
-              type="text"
+              type="number"
+              max="2023"
               id="finish_school"
               name="finish_school"
               value={educationField.finish_school}

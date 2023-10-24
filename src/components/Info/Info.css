@@ -28,3 +28,7 @@ input:focus, textarea:focus {
     border-radius: 5px;
     border-width: 2px;
 }
+
+input:invalid, textarea:invalid {
+    border: solid 2px red;
+}
