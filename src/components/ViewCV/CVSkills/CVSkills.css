@@ -1,0 +1,22 @@
+.skills-header {
+    padding: 0 10px 0 15px;
+    width: 100%;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.skills-header h2 {
+    width: 100%;
+    border-bottom: 2px solid var(--underlineHeaders);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.view-skills-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    list-style-type: none;
+}
