@@ -19,6 +19,7 @@
 
 textarea {
     padding:  10px 0 0 10px;
+    max-height: 150px;
 }
 
 input:focus, textarea:focus {

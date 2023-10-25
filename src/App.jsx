@@ -7,6 +7,7 @@ import Description from "./components/Description/Description";
 import Education from "./components/Education/Education";
 import Work from "./components/Work/Work";
 import ViewCV from "./components/ViewCV/ViewCV";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const [viewButton, setViewButton] = useState(true);
@@ -74,6 +75,15 @@ function App() {
     setExperience(duplicateArray);
   };
 
+  const [skills, setSkills] = useState(['', '', '', '', '', '', '', '']);
+
+  const addSkills = () => {
+    const dubSkills = [...skills];
+    const newSkill = '';
+    dubSkills.push(newSkill);
+    setSkills(dubSkills)
+  }
+
   const Print = () => {
     window.print();
   };
@@ -98,13 +108,19 @@ function App() {
             addExperienceSegment={addExperienceSegment}
             setExperience={setExperience}
           />
+          <Skills
+          skills={skills}
+          addSkills={addSkills}
+          setSkills={setSkills}
+          />
         </div>
       ) : (
         <div className="view-CV">
           <ViewCV info={info}
           description={description}
           education={education}
-          experience={experience} />
+          experience={experience}
+          skills={skills}/>
         </div>
       )}
     </div>
