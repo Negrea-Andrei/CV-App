@@ -4,12 +4,12 @@ export default function CVSkills({ skills }) {
   return (
     <div className="skills-header">
       <h2>Skills</h2>
-      <ul className="view-skills-grid">
+      <ul className="skills-body">
         {skills.map((talent) => {
-          if (talent !== "") {
+          if (talent.name !== "") {
             return (
-              <li key={talent}>
-                {talent}
+              <li key={talent.key}>
+                {talent.name}
               </li>
             );
           }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uuid from 'react-uuid';
+import uuid from "react-uuid";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Info from "./components/Info/Info";
@@ -75,14 +75,23 @@ function App() {
     setExperience(duplicateArray);
   };
 
-  const [skills, setSkills] = useState(['', '', '', '', '', '', '', '']);
+  const [skills, setSkills] = useState([
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+    { name: "", key: uuid() },
+  ]);
 
   const addSkills = () => {
     const dubSkills = [...skills];
-    const newSkill = '';
+    const newSkill = {name:'', key: uuid()};
     dubSkills.push(newSkill);
-    setSkills(dubSkills)
-  }
+    setSkills(dubSkills);
+  };
 
   const Print = () => {
     window.print();
@@ -108,19 +117,17 @@ function App() {
             addExperienceSegment={addExperienceSegment}
             setExperience={setExperience}
           />
-          <Skills
-          skills={skills}
-          addSkills={addSkills}
-          setSkills={setSkills}
-          />
+          <Skills skills={skills} addSkills={addSkills} setSkills={setSkills} />
         </div>
       ) : (
         <div className="view-CV">
-          <ViewCV info={info}
-          description={description}
-          education={education}
-          experience={experience}
-          skills={skills}/>
+          <ViewCV
+            info={info}
+            description={description}
+            education={education}
+            experience={experience}
+            skills={skills}
+          />
         </div>
       )}
     </div>

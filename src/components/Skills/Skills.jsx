@@ -18,7 +18,7 @@ export default function Skills({ skills, addSkills, setSkills }) {
     const val = e.target.value;
 
     let dupSkills = [...skills];
-    dupSkills[index] = val;
+    dupSkills[index].name = val;
     setSkills(dupSkills);
   };
   return (
@@ -37,11 +37,12 @@ export default function Skills({ skills, addSkills, setSkills }) {
       <div className="skills-grid">
         {skills.map((skill, index) => (
           <input
+            key={skill.key}
             placeholder="Skill"
             type="text"
             maxLength="20"
             name="skill"
-            value={skill}
+            value={skill.name}
             onChange={(e) => handleSetSkill(e, index)}
           />
         ))}

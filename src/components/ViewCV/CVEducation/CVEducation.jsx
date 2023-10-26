@@ -8,7 +8,7 @@ export default function CVEducation({ education }) {
         ? "No Education History Added"
         : education.map((item) => {
             return (
-              <div className="education-body">
+              <div className="education-body" key={item.key}>
                 <div>
                   <h3>{item.school}</h3>
                   <p className="degree">{item.degree}</p>

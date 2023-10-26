@@ -8,7 +8,7 @@ export default function CVExperience({ experience }) {
         ? "No Work History Added"
         : experience.map((item) => {
             return (
-              <div className="experience-body">
+              <div className="experience-body" key={item.key}>
                 <div>
                   <h3>{item.company}</h3>
                   <p className="role">{item.role}</p>

@@ -12,7 +12,7 @@
     margin-bottom: 10px;
 }
 
-.view-skills-grid {
+.skills-body {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
