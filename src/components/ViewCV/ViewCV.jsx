@@ -8,7 +8,7 @@ import CVSkills from "./CVSkills/CVSkills";
 
 export default function ViewCV({ info, description, education, experience,skills }) {
   return (
-    <div className="view-container">
+    <div className="view-container print-only">
       <CVHeader
         name={info.name}
         email={info.email}

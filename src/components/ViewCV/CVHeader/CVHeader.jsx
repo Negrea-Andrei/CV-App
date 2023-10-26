@@ -7,7 +7,7 @@ export default function CVHeader({name, phone, address, email}) {
   const displayEmail = email ? email : "email";
 
   return (
-    <div className="cv-header">
+    <div className="cv-header printer">
       <div className="name-header">{displayName}</div>
       <div className="info-part">
         <div>{displayEmail}</div>

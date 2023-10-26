@@ -4,7 +4,7 @@ import "./Header.css";
 export default function Header({ toggleState, viewButton, Print}) {
   return (
     <>
-      <header className="header">
+      <header className="header no-print">
         <h1>
           Create the perfect CV &nbsp;
           <i className="fa-regular fa-file-lines fa-xs"></i>

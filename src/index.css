@@ -16,27 +16,63 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
+
 html,
 body {
   width: 100%;
   height: 100vh;
-  background-color: var(--bodyColor); 
+  background-color: var(--bodyColor);
   font-size: 10px;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;  
+  width: 4px;
 }
 
 ::-webkit-scrollbar:hover {
-  width: 10px;   
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(167, 167, 167);
-  border-radius: 25px; 
+  border-radius: 25px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: lightgray; 
+  background-color: lightgray;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  .print-only {
+    visibility: visible;
+    zoom: 1;
+    width: 585px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+
+  .printer {
+    visibility: visible;
+  }
+
+  @page {
+    size: A4;
+    margin: 1rem 1rem 0 1rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+  }
+  
+
+  html {
+    font-size: 10px;
+  }
 }

@@ -2,7 +2,7 @@ import "./CVExperience.css";
 
 export default function CVExperience({ experience }) {
   return (
-    <div className="education-header">
+    <div className="education-header printer">
       <h2>Work Experience</h2>
       {experience.length === 0
         ? "No Work History Added"
