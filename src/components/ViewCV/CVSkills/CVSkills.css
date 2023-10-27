@@ -18,5 +18,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-    list-style-type: none;
+}
+
+.skills-body li {
+    margin-left: 20px;
 }

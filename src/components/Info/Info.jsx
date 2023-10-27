@@ -15,7 +15,7 @@ function Info({ info, setInfo }) {
             <input
               placeholder="First & Last Name"
               type="text"
-              pattern="[a-zA-Z]{3,30}"
+              maxLength={50}
               id="name"
               name=" name"
               onChange={(e) => handleChange(e)}
