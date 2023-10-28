@@ -16,9 +16,9 @@ export default function ViewCV({ info, description, education, experience,skills
         address={info.address}
       />
       <CVDescription description={description} />
-      <CVEducation education={education} />
       <CVExperience experience={experience} />
       <CVSkills skills={skills} />
+      <CVEducation education={education} />      
     </div>
   );
 }
