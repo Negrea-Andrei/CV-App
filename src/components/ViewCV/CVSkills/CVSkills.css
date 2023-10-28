@@ -17,9 +17,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 10px;    
+    margin-bottom: 20px;
 }
 
 .skills-body li {
     margin-left: 20px;
+    font-size: 1.2rem;
 }

@@ -7,7 +7,7 @@
 }
 
 :root {
-  --bodyColor: rgb(248, 255, 255);
+  --bodyColor: rgb(203, 231, 255);
   --sectionColor: rgb(203, 231, 255);
   --inputBorderFocused: rgb(27, 133, 0);
   --containerColor: rgb(235, 247, 255);

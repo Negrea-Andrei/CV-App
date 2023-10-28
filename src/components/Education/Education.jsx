@@ -60,8 +60,6 @@ export default function Education({
               placeholder="Start"
               id="start_school"
               type="number"
-              min="1970"
-              max="2023"
               name="start_school"
               value={educationField.start_school}
               onChange={(e) => handleSetInfo(e, index)}
@@ -69,8 +67,6 @@ export default function Education({
             <input
               placeholder="Finish"
               type="number"
-              min="1970"
-              max="2023"
               id="finish_school"
               name="finish_school"
               value={educationField.finish_school}

@@ -47,3 +47,9 @@ h1{
 span {
     font-size: 15px;
 }
+
+.cv-actions {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
