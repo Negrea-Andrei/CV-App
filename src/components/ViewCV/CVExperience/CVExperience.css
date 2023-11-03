@@ -12,10 +12,20 @@
     margin-bottom: 5px;
 }
 
+p.year {
+    position: absolute;
+    top: 0;
+    left: 80%;
+}
+
+p.role, p.degree {
+    margin: 0 0 7px 0;
+}
+
 .experience-body {
-    display: grid;
-    grid-template-columns: 2fr 320px 1fr;
-    grid-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     padding-bottom: 3rem;
     overflow-wrap: break-word;
 }

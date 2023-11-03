@@ -13,9 +13,9 @@
 }
 
 .education-body {
-    display: grid;
-    grid-template-columns: 2fr 320px 1fr;
-    grid-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     padding-bottom: 3rem;
     overflow-wrap: break-word;
 }
