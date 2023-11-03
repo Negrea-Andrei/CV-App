@@ -3,7 +3,7 @@ import "./CVEducation.css";
 export default function CVEducation({ education }) {
   return (
     <div className="education-header printer">
-      <h2>Education</h2>
+      <h2>EDUCATION</h2>
       {education.length === 0
         ? "No Education History Added"
         : education.map((item) => {

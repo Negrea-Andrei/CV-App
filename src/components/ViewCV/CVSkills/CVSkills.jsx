@@ -3,7 +3,7 @@ import "./CVSkills.css";
 export default function CVSkills({ skills }) {
   return (
     <div className="skills-header printer">
-      <h2>Skills</h2>
+      <h2>SKILLS</h2>
       <ul className="skills-body">
         {skills.map((talent) => {
           if (talent.name !== "") {
