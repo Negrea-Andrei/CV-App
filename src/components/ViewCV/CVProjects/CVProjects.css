@@ -1,0 +1,25 @@
+.projects-header {
+    padding: 0 10px 0 15px;
+    width: 100%;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.projects-header h2 {
+    width: 100%;
+    border-bottom: 2px solid var(--underlineHeaders);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.projects-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 3rem;
+    overflow-wrap: break-word;
+}
+
+.technologies {
+    text-align: left;
+}

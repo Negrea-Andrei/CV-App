@@ -8,6 +8,7 @@ import Education from "./components/Education/Education";
 import Work from "./components/Work/Work";
 import ViewCV from "./components/ViewCV/ViewCV";
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const [viewButton, setViewButton] = useState(true);
@@ -75,6 +76,27 @@ function App() {
     setExperience(duplicateArray);
   };
 
+  const [projects, setProjects] = useState([
+    {
+      key: uuid(),
+      project: "",
+      technologies: "",
+      description: "",
+    },
+  ]);
+
+  const addProjects = () => {
+    const duplicateArray = [...projects];
+    const newSegment = {
+      key: uuid(),
+      name: "",
+      technologies: "",
+      description: "",
+    };
+    duplicateArray.push(newSegment);
+    setProjects(duplicateArray);
+  };
+
   const [skills, setSkills] = useState([
     { name: "", key: uuid() },
     { name: "", key: uuid() },
@@ -88,7 +110,7 @@ function App() {
 
   const addSkills = () => {
     const dubSkills = [...skills];
-    const newSkill = {name:'', key: uuid()};
+    const newSkill = { name: "", key: uuid() };
     dubSkills.push(newSkill);
     setSkills(dubSkills);
   };
@@ -107,17 +129,22 @@ function App() {
             description={description}
             setDescription={setDescription}
           />
-          <Education
-            education={education}
-            addEducationSegment={addEducationSegment}
-            setEducation={setEducation}
-          />
+          <Projects
+            projects={projects}
+            addProjects={addProjects}
+            setProjects={setProjects}
+          ></Projects>
+          <Skills skills={skills} addSkills={addSkills} setSkills={setSkills} />
           <Work
             experience={experience}
             addExperienceSegment={addExperienceSegment}
             setExperience={setExperience}
           />
-          <Skills skills={skills} addSkills={addSkills} setSkills={setSkills} />
+          <Education
+            education={education}
+            addEducationSegment={addEducationSegment}
+            setEducation={setEducation}
+          />
         </div>
       ) : (
         <div className="view-CV">
@@ -127,6 +154,7 @@ function App() {
             education={education}
             experience={experience}
             skills={skills}
+            projects={projects}
           />
         </div>
       )}
