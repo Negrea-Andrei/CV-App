@@ -5,13 +5,8 @@ The CV App is a web application built using Vite and React that allows users to 
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -22,7 +17,7 @@ The CV App is a web application built using Vite and React that allows users to 
 
 ## Usage
 
-1. **Access the App**: Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the CV App.
+1. **Access the App**: Open your web browser and go to http://cv-app-fawn.vercel.app to access the CV App.
 
 2. **Input Your Details**: Use the app to input your general information, short description, education, work experience, and skills.
 
