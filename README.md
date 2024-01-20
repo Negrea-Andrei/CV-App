@@ -8,7 +8,7 @@ The CV App is a web application built using Vite and React that allows users to 
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 
-## Features
+## Features 
 
 - User-friendly interface for creating and editing CVs.
 - Input sections for general information, short description, education, work experience, and skills.
